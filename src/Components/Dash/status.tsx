@@ -43,7 +43,7 @@ const Choc = () => {
           <Flex
             key={token.id}
             direction="column"
-            bg={token.hospede ? bg2 : bg}
+            bg={token.hospede ? bg : bg2}
             p={4}
             borderRadius="md"
             boxShadow="lg"
@@ -55,7 +55,7 @@ const Choc = () => {
             </chakra.span>
             <chakra.span fontWeight="bold">Hospede</chakra.span>
             <span>{token.hospede}</span>
-
+            
             <Button
               size="sm"
               variant="solid"

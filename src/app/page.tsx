@@ -1,15 +1,17 @@
-// app/page.tsx
 'use client'
 
-import Homepage from "../Components/Home/Homepage"
-import Dashboard from "../Components/Dash/Dashboard"
-import Status from "../Components/Dash/status"
+import Homepage from "../../src/Components/Home/Homepage"
+import Status from "../../src/Components/Dash/status"
+import Form from "../Components/Formulários/Form"
+
 
 export default function Page() {
   return (
     <div>
+      
         <Homepage/>
         <Status/>
+        <Form/>
     </div>
 
   )
