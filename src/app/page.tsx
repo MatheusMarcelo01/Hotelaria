@@ -3,12 +3,13 @@
 
 import Homepage from "../Components/Home/Homepage"
 import Dashboard from "../Components/Dash/Dashboard"
+import Status from "../Components/Dash/status"
 
 export default function Page() {
   return (
     <div>
         <Homepage/>
-        <Dashboard/>
+        <Status/>
     </div>
 
   )

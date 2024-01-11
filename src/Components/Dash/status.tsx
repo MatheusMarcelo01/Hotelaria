@@ -1,90 +1,90 @@
-'use client'
+import React, { useState } from "react";
+import {
+  Button,
+  Flex,
+  Icon,
+  IconButton,
+  chakra,
+  useColorModeValue,
+  Grid,
+} from "@chakra-ui/react";
+import { AiFillEdit, AiTwotoneLock } from "react-icons/ai";
+import { BsBoxArrowUpRight, BsFillTrashFill } from "react-icons/bs";
 
-import { Box, Flex, keyframes, Tooltip } from '@chakra-ui/react'
-import React from 'react'
+const Choc = () => {
+  const [quartos, setQuartos] = useState(Array.from({ length: 30 }, (_, id) => ({
+    id: id + 1,
+    quarto: `Quarto ${id + 1}`,
+    hospede: "Luis",
+  })));
 
-export default function StatusIndicator() {
-  const activeColor = 'green.500'
-  const inactiveColor = 'red.400'
-  const ringScaleMin = 0.33
-  const ringScaleMax = 0.66
-
-  const pulseRing = keyframes`
-    0% {
-      transform: scale(${ringScaleMin});
-    }
-    30% {
-      transform: scale(${ringScaleMax});
-    }
-    40%, 50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-	`
-
-  const pulseDot = keyframes`
-	0% {
-    transform: scale(0.9);
-  }
-  25% {
-    transform: scale(1.1);
-  }
-  50% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(0.9);
-  }
-	`
+  const bg = useColorModeValue("red.200", "gray.800");
+  const bg2 = useColorModeValue("green.200", "red.500");
 
   return (
     <Flex
-      justifyContent="center"
-      alignItems="center"
-      h="216px"
-      w="full"
-      flexDir="column"
-      overflow="hidden">
-      {/* Ideally, only the box should be used. The <Flex /> is used to style the preview. */}
-      <Tooltip label={`Status: Active`} textTransform="capitalize">
-        <Box
-          as="div"
-          h="24px"
-          w="24px"
-          mb="1.99em"
-          position="relative"
-          bgColor={activeColor}
-          borderRadius="50%"
-          _before={{
-            content: "''",
-            position: 'relative',
-            display: 'block',
-            width: '300%',
-            height: '300%',
-            boxSizing: 'border-box',
-            marginLeft: '-100%',
-            marginTop: '-100%',
-            borderRadius: '50%',
-            bgColor: activeColor,
-            animation: `2.25s ${pulseRing} cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite`,
-          }}
-          _after={{
-            animation: `2.25s ${pulseDot} cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite`,
-          }}
-        />
-      </Tooltip>
-      <Tooltip label={`Status: Inactive`} textTransform="capitalize">
-        <Box
-          as="div"
-          h="24px"
-          w="24px"
-          position="relative"
-          bgColor={inactiveColor}
-          borderRadius="50%"
-        />
-      </Tooltip>
+      direction="column"
+      align="center"
+      bg="#edf3f8"
+      _dark={{ bg: "#3e3e3e" }}
+      p={4}
+    >
+      <Grid
+        templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }}
+        gap={4}
+        w={{ base: "full", md: "80%" }}
+      >
+        {quartos.map((token) => (
+          <Flex
+            key={token.id}
+            direction="column"
+            bg={token.hospede ? bg2 : bg}
+            p={4}
+            borderRadius="md"
+            boxShadow="lg"
+            width={{ base: "100%", md: "100%" }}
+            mb={4}
+          >
+            <chakra.span fontWeight="bold" fontSize={{ base: "lg", md: "xl" }}>
+              {token.quarto}
+            </chakra.span>
+            <chakra.span fontWeight="bold">Hospede</chakra.span>
+            <span>{token.hospede}</span>
+
+            <Button
+              size="sm"
+              variant="solid"
+              leftIcon={<Icon as={AiTwotoneLock} />}
+              colorScheme="purple"
+              mt={2}
+            >
+              Consultar
+            </Button>
+
+            <Flex justify="flex-end" mt={2}>
+              <IconButton
+                colorScheme="blue"
+                icon={<BsBoxArrowUpRight />}
+                aria-label="Up"
+                mr={2}
+              />
+              <IconButton
+                colorScheme="green"
+                icon={<AiFillEdit />}
+                aria-label="Edit"
+                mr={2}
+              />
+              <IconButton
+                colorScheme="red"
+                icon={<BsFillTrashFill />}
+                aria-label="Delete"
+              />
+            </Flex>
+          </Flex>
+        ))}
+      </Grid>
     </Flex>
-  )
-}
+  );
+};
+
+export default Choc;
