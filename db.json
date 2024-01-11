@@ -1,11 +1,11 @@
 {
     "quartos": [
       { "id": 1, "quarto": "Quarto 1", "hospede": "Luis" },
-      { "id": 2, "quarto": "Quarto 2", "hospede": " " },
-      { "id": 3, "quarto": "Quarto 3", "hospede": " " },
+      { "id": 2, "quarto": "Quarto 2", "hospede": "" },
+      { "id": 3, "quarto": "Quarto 3", "hospede": "" },
       { "id": 4, "quarto": "Quarto 4", "hospede": "Ana" },
       { "id": 5, "quarto": "Quarto 5", "hospede": "Pedro" },
-      { "id": 6, "quarto": "Quarto 6", "hospede": " " },
+      { "id": 6, "quarto": "Quarto 6", "hospede": "" },
       { "id": 7, "quarto": "Quarto 7", "hospede": "Mário" },
       { "id": 8, "quarto": "Quarto 8", "hospede": "Laura" },
       { "id": 9, "quarto": "Quarto 9", "hospede": "Fernando" },

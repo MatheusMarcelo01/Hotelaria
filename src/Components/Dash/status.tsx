@@ -37,6 +37,8 @@ const Choc = () => {
         gap={4}
         w={{ base: "full", md: "80%" }}
       >
+
+
         {quartos.map((token) => (
           <Flex
             key={token.id}
