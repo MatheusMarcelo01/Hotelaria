@@ -1,25 +1,28 @@
-import React, { useState } from "react";
-import {
-  Button,
-  Flex,
-  Icon,
-  IconButton,
-  chakra,
-  useColorModeValue,
-  Grid,
-} from "@chakra-ui/react";
+import React, { useState, useEffect } from "react";
+import api from "../../../utils/api";
+
+import {  Button,  Flex,  Icon,  IconButton,  chakra,  useColorModeValue,  Grid,} from "@chakra-ui/react";
 import { AiFillEdit, AiTwotoneLock } from "react-icons/ai";
 import { BsBoxArrowUpRight, BsFillTrashFill } from "react-icons/bs";
 
 const Choc = () => {
-  const [quartos, setQuartos] = useState(Array.from({ length: 30 }, (_, id) => ({
-    id: id + 1,
-    quarto: `Quarto ${id + 1}`,
-    hospede: "Luis",
-  })));
+  const [quartos, setQuartos] = useState([]);
 
   const bg = useColorModeValue("red.200", "gray.800");
   const bg2 = useColorModeValue("green.200", "red.500");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await api.get("/quartos");
+        setQuartos(response.data);
+      } catch (error) {
+        console.error("Erro ao buscar dados do servidor JSON:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <Flex
