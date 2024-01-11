@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "json-server": "json-server --watch db.json --port 3001",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -15,6 +16,7 @@
     "@choc-ui/logo": "^1.0.0",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
+    "axios": "^1.6.5",
     "framer-motion": "^10.18.0",
     "next": "14.0.4",
     "react": "^18",
@@ -26,6 +28,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "json-server": "^1.0.0-alpha.17",
     "typescript": "^5"
   }
 }
