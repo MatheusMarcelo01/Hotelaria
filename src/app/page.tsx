@@ -8,8 +8,6 @@ import Form from "../Components/Formulários/Form"
 export default function Page() {
   return (
     <div>
-      
-        <Homepage/>
         <Status/>
         <Form/>
     </div>

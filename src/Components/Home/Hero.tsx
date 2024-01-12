@@ -26,7 +26,7 @@ export default function CallToActionWithAnnotation() {
             fontWeight={600}
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}>
-             Venha para a <br />
+             Conheça a <br />
             <Text as={'span'} color={'orange.400'}>
               Pousada Chalé
             </Text>
@@ -48,7 +48,7 @@ export default function CallToActionWithAnnotation() {
               _hover={{
                 bg: 'orange.500',
               }}>
-              Iniciar Tour
+              Começar
             </Button>
             <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
               Saiba mais

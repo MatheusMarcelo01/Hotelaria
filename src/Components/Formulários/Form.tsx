@@ -1,7 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
+
 import {  Box,  Button, FormControl,  FormLabel,  GridItem,  Input,  Select,  SimpleGrid,  Stack,  chakra,  Divider,} from "@chakra-ui/react";
 
 const Choc = () => {
+  const [formData, setFormData] = useState({
+    nome: "",
+    empresa: "",
+    telefone: "",
+    email: "",
+    endereco: "",
+    cidade: "",
+    estado: "",
+    noites: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Dados do formulário:", formData);
+    setFormData({
+      nome: "",
+      empresa: "",
+      telefone: "",
+      email: "",
+      endereco: "",
+      cidade: "",
+      estado: "",
+      noites: "",
+    });
+  };
+
   return (
     
     <Box bg="#edf3f8" _dark={{ bg: "#111" }} p={10}>
@@ -213,7 +245,7 @@ const Choc = () => {
                       color="gray.700"
                       _dark={{ color: "gray.50" }}
                     >
-                      CEP
+                      Noites
                     </FormLabel>
                     <Input
                       type="text"
@@ -224,7 +256,7 @@ const Choc = () => {
                       focusBorderColor="brand.400"
                       shadow="sm"
                       size="sm"
-                      w="full"
+                      w="35%"
                       rounded="md"
                     />
                     
