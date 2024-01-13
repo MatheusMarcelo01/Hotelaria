@@ -44,7 +44,7 @@ const Choc = () => {
         _dark={{ borderColor: "whiteAlpha.300" }}
         visibility={{ base: "hidden", sm: "visible" }}
       />
-      <p> Formulario</p>
+      <p> Formulário || CADASTRO DE HÓSPEDES</p>
 
       <Box mt={[10, 0]}>
         <SimpleGrid
@@ -238,31 +238,89 @@ const Choc = () => {
                   </FormControl>
 
                   <FormControl as={GridItem} colSpan={[6, 3, null, 2]}>
-                    <FormLabel
+                  <FormControl as={GridItem} colSpan={[1, 1]}>
+                        <FormLabel
+                          htmlFor="country"
+                          fontSize="sm"
+                          fontWeight="md"
+                          color="gray.700"
+                          _dark={{
+                            color: 'gray.50',
+                          }}>
+                          Número do Quarto
+                        </FormLabel>
+                        <Select
+                          id="quarto"
+                          name="quarto"
+                          autoComplete="quarto"
+                          placeholder="Select option"
+                          focusBorderColor="brand.400"
+                          shadow="sm"
+                          size="sm"
+                          w="full"
+                          rounded="md">
+                          <option>Quarto 1</option>
+                          <option>Quarto 2</option>
+                          <option>Quarto 3</option>
+                          <option>Quarto 4</option>
+                          <option>Quarto 5</option>
+                          <option>Quarto 6</option>
+                          <option>Quarto 7</option>
+                          <option>Quarto 8</option>
+                          <option>Quarto 9</option>
+                          <option>Quarto 10</option>
+                          <option>Quarto 11</option>
+                          <option>Quarto 12</option>
+                          <option>Quarto 13</option>
+                          <option>Quarto 14</option>
+                          <option>Quarto 15</option>
+                          <option>Quarto 16</option>
+                          <option>Quarto 17</option>
+                          <option>Quarto 18</option>
+                          <option>Quarto 19</option>
+                          <option>Quarto 20</option>
+                          <option>Quarto 21</option>
+                          <option>Quarto 22</option>
+                          <option>Quarto 23</option>
+                          <option>Quarto 24</option>
+                          <option>Quarto 25</option>
+                          <option>Quarto 26</option>
+                          <option>Quarto 27</option>
+                          <option>Quarto 28</option>
+                          <option>Quarto 29</option>
+                          <option>Quarto 30</option>
+                        </Select>
+                      </FormControl>
+                     
+                    
+                  </FormControl>
+                  
+                  
+                </SimpleGrid>
+                 
+                <FormLabel
+                      style={{ marginInlineEnd: "auto" }}
                       htmlFor="cep"
                       fontSize="sm"
                       fontWeight="md"
                       color="gray.700"
                       _dark={{ color: "gray.50" }}
                     >
-                      Noites
+                      Quantidade de Noites
                     </FormLabel>
                     <Input
                       type="text"
                       name="cep"
                       id="cep"
                       autoComplete="postal-code"
-                      mt={1}
+                      mt={-6}
                       focusBorderColor="brand.400"
                       shadow="sm"
                       size="sm"
-                      w="35%"
+                      w="20%"
                       rounded="md"
                     />
-                    
-                  </FormControl>
-                  
-                </SimpleGrid>
+
                 <Button
                     colorScheme="green"
                     size="sm" 

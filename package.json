@@ -18,6 +18,7 @@
     "@emotion/styled": "^11.11.0",
     "axios": "^1.6.5",
     "framer-motion": "^10.18.0",
+    "fs": "^0.0.1-security",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",

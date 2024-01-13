@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from "react";
 import api from "../../../utils/api";
 
-import {
-  Button,
-  Flex,
-  Icon,
-  IconButton,
-  chakra,
-  useColorModeValue,
-  Grid,
-} from "@chakra-ui/react";
+
+import {  Button,  Flex,  Icon,  IconButton,  chakra,  useColorModeValue,  Grid,} from "@chakra-ui/react";
 import { AiFillEdit, AiTwotoneLock } from "react-icons/ai";
 import { BsFillPlusSquareFill, BsFillTrashFill } from "react-icons/bs";
 
@@ -40,11 +33,13 @@ const Choc = () => {
       _dark={{ bg: "#3e3e3e" }}
       p={4}
     >
+
       <Grid
         templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }}
         gap={4}
         w={{ base: "full", md: "80%" }}
       >
+        
         {quartos.map((token) => (
           <Flex
             key={token.id}
@@ -83,12 +78,7 @@ const Choc = () => {
             </Button>
 
             <Flex justify="flex-end" mt={2}>
-              <IconButton
-                colorScheme="blue"
-                icon={<BsFillPlusSquareFill />}
-                aria-label="Up"
-                mr={2}
-              />
+
               <IconButton
                 colorScheme="green"
                 icon={<AiFillEdit />}
@@ -100,6 +90,7 @@ const Choc = () => {
                 icon={<BsFillTrashFill />}
                 aria-label="Delete"
               />
+              
             </Flex>
           </Flex>
         ))}
@@ -134,6 +125,10 @@ const VermelhaEstatica = () => (
     bg="green.500"
     zIndex="1"
   />
+  
+
+  
 );
 
 export default Choc;
+

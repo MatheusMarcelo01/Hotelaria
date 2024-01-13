@@ -6,7 +6,7 @@
     { "id": 4, "quarto": "Quarto 4", "hospede": "Ana", "empresa": "", "telefone": "", "email": "", "endereco": "", "cidade": "", "estado": "", "noites": 0 },
     { "id": 5, "quarto": "Quarto 5", "hospede": "Pedro", "empresa": "", "telefone": "", "email": "", "endereco": "", "cidade": "", "estado": "", "noites": 0 },
     { "id": 6, "quarto": "Quarto 6", "hospede": "", "empresa": "", "telefone": "", "email": "", "endereco": "", "cidade": "", "estado": "", "noites": 0 },
-    { "id": 7, "quarto": "Quarto 7", "hospede": "Mário", "empresa": "", "telefone": "", "email": "", "endereco": "", "cidade": "", "estado": "", "noites": 0 },
+    { "id": 7, "quarto": "Quarto 7", "hospede": "", "empresa": "", "telefone": "", "email": "", "endereco": "", "cidade": "", "estado": "", "noites": 0 },
     { "id": 8, "quarto": "Quarto 8", "hospede": "Laura", "empresa": "", "telefone": "", "email": "", "endereco": "", "cidade": "", "estado": "", "noites": 0 },
     { "id": 9, "quarto": "Quarto 9", "hospede": "Fernando", "empresa": "", "telefone": "", "email": "", "endereco": "", "cidade": "", "estado": "", "noites": 0 },
     { "id": 10, "quarto": "Quarto 10", "hospede": "Isabel", "empresa": "", "telefone": "", "email": "", "endereco": "", "cidade": "", "estado": "", "noites": 0 },
