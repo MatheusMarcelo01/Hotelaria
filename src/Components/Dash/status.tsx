@@ -25,6 +25,8 @@ const Choc = () => {
     fetchData();
   }, []);
 
+
+
   return (
     <Flex
       direction="column"
@@ -89,7 +91,7 @@ const Choc = () => {
                 colorScheme="red"
                 icon={<BsFillTrashFill />}
                 aria-label="Delete"
-              />
+                />
               
             </Flex>
           </Flex>
