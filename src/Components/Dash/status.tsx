@@ -75,6 +75,8 @@ const Choc = () => {
               leftIcon={<Icon as={AiTwotoneLock} />}
               colorScheme="purple"
               mt={2}
+              _hover={{ bg: 'purple.600',transform: 'scale(1.05)',
+                transition: 'transform 0.3s ease' }}
             >
               Consultar
             </Button>
@@ -86,11 +88,15 @@ const Choc = () => {
                 icon={<AiFillEdit />}
                 aria-label="Edit"
                 mr={2}
+                _hover={{ bg: 'green.600',transform: 'scale(1.05)',
+                transition: 'transform 0.3s ease' }}
               />
               <IconButton
                 colorScheme="red"
                 icon={<BsFillTrashFill />}
                 aria-label="Delete"
+                _hover={{ bg: 'red.600',transform: 'scale(1.05)',
+                transition: 'transform 0.3s ease' }}
                 />
               
             </Flex>
