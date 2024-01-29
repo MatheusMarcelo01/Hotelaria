@@ -253,7 +253,7 @@ const Choc = () => {
                           id="quarto"
                           name="quarto"
                           autoComplete="quarto"
-                          placeholder="Select option"
+                          placeholder="Selecione o quarto"
                           focusBorderColor="brand.400"
                           shadow="sm"
                           size="sm"
